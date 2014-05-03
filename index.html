@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<head>
+  <title>HEATworks&trade;</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+  <style>
+    #header-container {
+      width: 915px;
+      margin: 0 auto;
+    }
+    
+    header {
+      width: 650px;
+      height: auto;
+      border-radius: 20px;
+      margin: 20px auto 0;
+      background: rgb(165,22,22);
+      box-shadow: 0 10px 0 rgb(103,14,14), 0 12px 1px, 0 12px 25px;
+    }
+    
+    #title {
+      position: relative;
+      z-index: 1;
+      width: 430px;
+      height: 115px;
+      margin: 0 auto -30px;
+      background: rgb(165,22,22);
+      text-align: center;
+    }
+    
+    h1 {
+      padding-top: 10px;
+      margin-top: 0;
+      font-family: arial bold italic;
+      font-size: 60px;
+      color: white;
+      text-shadow: 0 1px 0 rgba(0,0,0,.15), 0 2px 0 rgba(0,0,0,.15), 0 3px 0 rgba(0,0,0,.15), 0 4px 0 rgba(0,0,0,.15), 0 5px 0 rgba(0,0,0,.15);
+    }
+    
+    #TM {
+      position: relative;
+      top: -22px;
+      font-size: 20px;
+      text-shadow: 0 2px 1px rgba(0,0,0,.4);
+    }
+    
+    h2 {
+      margin: -45px 0 0 9px;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 12px;
+      color: white;
+      letter-spacing: 2px;
+      text-shadow: 0 1px 5px rgba(0,0,0,.7);
+    }
+    
+    #ribbon {
+      position: relative;
+      bottom: 46px;
+      width: 500px;
+      height: 0;
+      border-top: 15px solid white;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid #EEE;
+      margin: 0 auto;
+      box-shadow: 0 4px 0 rgba(0,0,0,.4);
+    }
+    
+    #buffer {
+      position: relative;
+      z-index: -1;
+      display: block;
+      width: 915px;
+      height: 60px;
+      border-top: 10px solid white;
+      margin: -50px auto -8px;
+      background: rgba(245,245,245,.95);
+    }
+    
+    body {
+      background: url("http://a.espncdn.com/photo/2013/0508/play_wip_02.jpg");
+      background-position: 50% 0;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    
+    #content {
+      position: relative;
+      bottom: -8px;
+      width: 755px;
+      padding: 0 80px 20px;
+      margin: 0 auto;
+      background: rgba(245,245,245,.95);
+    }
+    
+    h3 {
+      padding: 3px 0 5px;
+      margin: 0 -90px;
+      background: rgb(242,206,0);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 30px;
+      color: white;
+      text-align: center;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 0 rgba(0,0,0,.4);
+    }
+    
+    .fold-l {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 10px solid rgb(206,175,0);
+      border-left: 10px solid transparent;
+      margin-top: 5px;
+    }
+    
+    .fold-r {
+      position: absolute;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 10px solid rgb(206,175,0);
+      border-right: 10px solid transparent;
+      margin-top: 5px;
+      margin-right: -10px;
+    }
+    
+    #block {
+      position: relative;
+      height: 400px;
+      margin-bottom: 40px;
+      background: url("https://farm3.staticflickr.com/2852/13374433513_b4b05a9c9b_o.jpg");
+      background-position: 0 75%;
+      background-size: cover;
+      cursor: pointer;
+    }
+    
+    #ropes {
+      position: relative;
+      height: 400px;
+      margin-bottom: 40px;
+      background: url("https://farm8.staticflickr.com/7361/12948629634_2c1b63cc50_o.jpg");
+      background-position: 0 70%;
+      background-size: cover;
+      cursor: pointer;
+    }
+    
+    #points {
+      position: relative;
+      height: 400px;
+      margin-bottom: 40px;
+      background: url("https://farm8.staticflickr.com/7353/12948713374_300eeaefa8_o.png");
+      background-position: 0 50%;
+      background-size: cover;
+      cursor: pointer;
+    }
+    
+    .p-bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 58px;
+      background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.9));
+      transition: height .5s;
+      -webkit-transition: height .5s;
+      -moz-transition: height .5s;
+    }
+    
+    .work p {
+      position: absolute;
+      z-index: 1;
+      bottom: -16px;
+      height: 35px;
+      padding: 10px 15px 13px;
+      font-family: Lao UI;
+      color: white;
+      pointer-events: none;
+      transition: height .5s;
+      -webkit-transition: height .5s;
+      -moz-transition: height .5s;
+    }
+    
+    .credit {
+      font-size: 11px;
+      font-weight: bold;
+      transition: opacity .5s;
+      -webkit-transition: opacity .5s;
+      -moz-transition: opacity .5s;
+    }
+
+    small {
+      position: relative;
+      top: -14px;
+      opacity: 0;
+      transition: opacity .5s;
+      -webkit-transition: opacity .5s;
+      -moz-transition: opacity .5s;
+    }
+    
+    .show-description span {
+      opacity: 0;
+    }
+    
+    .show-description small {
+      opacity: 1;
+    }
+    
+    .show-description p {
+      height: 55px;
+    }
+    
+    .show-description .p-bg{
+      height: 78px;
+    }
+    
+    #license {
+      padding: 5px 5px 5px 10px;
+      margin: 0 -80px -40px;
+      background: white;
+      font-family: Lao UI;
+      font-size: 14px;
+      color: grey;
+    }
+    
+    a {
+      color: grey;
+    }
+    
+    @media (max-width: 500px) {
+      #header-container {
+        width: auto;
+      }
+      
+      header {
+        width: auto;
+        border-radius: 15px;
+        margin: 10px auto 0;
+      }
+      
+      #title {
+        width: 210px;
+        height: 80px;
+        margin: 0 auto -20px;
+      }
+      
+      h1 {
+        padding-top: 8px;
+        font-size: 30px;
+        text-shadow: 0 1px 0px rgba(0,0,0,.15), 0 2px 0px rgba(0,0,0,.15), 0 3px 0px rgba(0,0,0,.15), 0 4px 0px rgba(0,0,0,.15);
+      }
+      
+      #TM {
+        position: relative;
+        top: -12px;
+        font-size: 9px;
+      }
+      
+      h2 {
+        width: 200px;
+        margin: -20px 26px;
+        font-size: 9px;
+        text-align: left;
+        line-height: 12px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.6);
+      }
+      
+      #ribbon {
+        position: relative;
+        top: -33px;
+        width: 230px;
+        margin: -15px auto;
+        border-top: 10px solid white;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #EEE;
+        box-shadow: 0px 3px 0px rgba(0,0,0,.4);
+      }
+      
+      #buffer {
+        margin: -40px 0 -20px;
+        width: auto;
+        height: 53px;
+        border-top: 5px solid white;
+      }
+      
+      h3 {
+        margin: 0 -20px 0;
+        font-size: 16px;
+      }
+      #content {
+        width: auto;
+        padding: 0 10px;
+        margin: 10px 2px -8px;
+      }
+      
+      .work p {
+        bottom: -14px;
+        padding: 5px 10px;
+        font-size: 14px;
+      }
+      
+      small {
+        display: none;
+      }
+      
+      #block {
+        height: 150px;
+        margin-bottom: 15px;
+      }
+      
+      #ropes {
+        height: 150px;
+        margin-bottom: 15px;
+      }
+      
+      #points {
+        height: 150px;
+        margin-bottom: 15px;
+      }
+      
+      #license {
+        margin: 0 -10px;
+        font-size: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header-container">
+  <header>
+    <div id="title">
+      <h1>| HEATworks<span id="TM">&trade;</span></h1>
+      <h2>IMMORTALIZING MOMENTS IN MIAMI HEAT HISTORY</h2>
+    </div>
+    <div id="ribbon"></div>
+  </header>
+  </div>
+  <div id="buffer"></div>
+  <div id="content">
+    <h3>
+      &#9733;&nbsp;&nbsp;JUNE 09, 2013&nbsp;&nbsp;&#9733;
+      <div class="fold-l"></div><div class="fold-r"></div>
+    </h3>
+    <a href="https://farm3.staticflickr.com/2852/13374433513_b4b05a9c9b_o_d.jpg"><div class="work" id="block">
+      <p class="work">
+        "NOT TONIGHT."<br /><span class="credit">by galacemiguel</span><br />
+        <small>#6 stood as the last line of defense against near 7-foot Tiago Splitter. Both rose up, meeting at the apices of their jumps. Splitter never found his way to the rim.</small>
+      </p>
+      <div class="p-bg"></div>
+    </div></a>
+    <h3>
+      &#9733;&nbsp;&nbsp;JUNE 18, 2013&nbsp;&nbsp;&#9733;
+      <div class="fold-l"></div><div class="fold-r"></div>
+    </h3>
+    <a href="https://farm8.staticflickr.com/7361/12948629634_2c1b63cc50_o_d.jpg"><div class="work" id="ropes">
+      <p class="work">
+        "Ropes"<br /><span class="credit">by galacemiguel</span><br />
+        <small>Down 5 with 28.2 ticks left in Game 6 of the NBA Finals, the yellow rope had been brought out on the Miami HEAT. But one man on the floor that night had something to say about it. And it wasn't nice.</small>
+      </p>
+      <div class="p-bg"></div>
+    </div></a>
+    <h3>
+      &#9733;&nbsp;&nbsp;MARCH 03, 2014&nbsp;&nbsp;&#9733;
+      <div class="fold-l"></div><div class="fold-r"></div>
+    </h3>
+    <a href="https://farm8.staticflickr.com/7353/12948713374_300eeaefa8_o_d.png"><div class="work" id="points">
+      <p class="work">
+        "SIXTY-ONE."<br /><span class="credit">by galacemiguel</span><br />
+        <small>LeBron put on a show against the visiting Bobcats, knocking down shot after shot, including 8/10 from deep. He ultimately finished the game with 61 points&mdash;a new career-high.</small>
+      </p>
+      <div class="p-bg"></div>
+    </div></a>
+    <p id="license">&copy; 2014 - HEATworks&trade; is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons 4.0 License</a>.<p>
+  </div>
+  
+  <script>
+    $('.work').hover(function() {
+      $(this).toggleClass('show-description');
+    });
+  </script>
+</body>
+</html>
