@@ -80,7 +80,7 @@
 			position: relative;
 			margin: -15px auto 0;
 			width: 800px;
-			height: 940px;
+			height: 1060px;
 			border-radius: 10px;
 			box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
 			background: rgb(244,244,244);
@@ -109,6 +109,12 @@
 			color: white;
 			text-shadow: 0 0 10px black;
 			line-height: 50px;
+		}
+
+		.content#mar25 {
+			background: url("https://farm8.staticflickr.com/7330/14184981405_da92b9a314_b.jpg");
+			background-position: 0 50%;
+			background-size: cover;
 		}
 
 		.content#jun9 {
@@ -201,6 +207,11 @@
 			float: left;
 		}
 
+		.thumbnail#mar25 {
+			background: url("https://farm8.staticflickr.com/7330/14184981405_da92b9a314_m.jpg");
+			background-size: cover;
+		}
+
 		.thumbnail#jun9 {
 			background: url("https://farm3.staticflickr.com/2852/13374433513_4608621cf0_m.jpg");
 			background-position: 100% 0;
@@ -276,26 +287,32 @@
 				HISTORY
 			</p>
 		</div>
-		<div class="content 0" id="jun9"></div>
-		<div class="content 1" id="jun18"></div>
-		<div class="content 2" id="mar3"></div>
+		<div class="content 0" id="mar25"></div>
+		<div class="content 1" id="jun9"></div>
+		<div class="content 2" id="jun18"></div>
+		<div class="content 3" id="mar3"></div>
 		<div id="info"></div>
 		<div id="timeline">#HEATimeline</div>
 		<span id="license">
 			&copy; 2014 - HEATworks&trade; is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons 4.0 License</a>
 		</span>
 
-		<div class="work 0" id="jun9">
+		<div class="work 0" id="mar25">
+			<div class="thumbnail" id="mar25"></div>
+			<span class="date">MARCH 25, 2013</span><br />
+			<span class="description">The HEAT won handily against a shorthanded Orlando Magic squad to stretch their record-setting run to a 27th consecutive victory&mdash;their longest win streak in franchise history and only six shy of the Lakers' top mark in the '72 season.</span>
+		</div>
+		<div class="work 1" id="jun9">
 			<div class="thumbnail" id="jun9"></div>
 			<span class="date">JUNE 09, 2013</span><br />
 			<span class="description">#6 stood as the last line of defense against near 7-foot Tiago Splitter. Both rose up, meeting at the apices of their jumps. Splitter never found his way to the rim.</span>
 		</div>
-		<div class="work 1" id="jun18">
+		<div class="work 2" id="jun18">
 			<div class="thumbnail" id="jun18"></div>
 			<span class="date">JUNE 18, 2013</span><br />
 			<span class="description">Down 5 with 28.2 ticks left in Game 6 of the NBA Finals, the yellow rope had been brought out on the Miami HEAT. But one man on the floor that night had something to say about it. And it wasn't nice.</span>
 		</div>
-		<div class="work 2" id="mar3">
+		<div class="work 3" id="mar3">
 			<div class="thumbnail" id="mar3"></div>
 			<span class="date">MARCH 03, 2014</span><br />
 			<span class="description">LeBron put on a show against the visiting Bobcats, knocking down shot after shot, including 8/10 from deep. He ultimately finished the game with 61 points&mdash;a new career-high.</span>
@@ -316,6 +333,9 @@
 			}, 500);
 
 			switch (newShow.prop('id')) {
+				case 'mar25':
+					$('#info').html('<a href="https://farm8.staticflickr.com/7330/14184981405_f217ef0430_o_d.jpg"><img src="Resources/download.png" class="download" id="mar25" /></a><b>"27"</b><br /><small>by galacemiguel</small>');
+					break;
 				case 'jun9':
 					$('#info').html('<a href="https://farm3.staticflickr.com/2852/13374433513_b4b05a9c9b_o_d.jpg"><img src="Resources/download.png" class="download" id="jun9" /></a><b>"NOT TONIGHT."</b><br /><small>by galacemiguel</small>');
 					break;
