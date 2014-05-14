@@ -4,7 +4,7 @@
 	<title>HEATworks&trade;</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
 	<style>
 		body {
 			background: rgb(145,25,25);
@@ -219,7 +219,7 @@
 		.description {
 			width: 550px;
 			font-family: 'Lao UI';
-			font-size: 14px;
+			font-size: 15px;
 		}
 
 		.work.active {
@@ -335,7 +335,7 @@
 					i++;
 				}
 			}
-			if (i < 3) {
+			if (i < $('.content').length - 1) {
 				cycle();
 			} else {
 				i = 0;
