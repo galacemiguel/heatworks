@@ -1,0 +1,130 @@
+/**
+ * COLOR SCHEME
+ * Bright Red:	#bf303c
+ * Dark Red:	#8c2b34
+ * Black:		#1d2625
+ * Orange:		#f28f16
+ * White:		#f2f2f2
+ */
+
+body
+ {
+	margin: 0px;
+	background: #8C2B34;
+}
+
+nav {
+
+}
+
+#ribbon {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 1;
+}
+
+#rbn-main {
+	position: relative;
+	margin: 0 auto;
+	width: 340px;
+	height: 60px;
+	background: rgb(220,180,0);
+	text-align: center;
+}
+
+#title {
+	font-family: 'Arial';
+	font-size: 36px;
+	color: #f2f2f2;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 60px;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+#rbn-lfld {
+	position: absolute;
+	left: -15px;
+	bottom: -15px;
+	border-left: 15px solid transparent;
+	border-right: 20px solid rgb(176,150,0);
+	border-bottom: 15px solid transparent;
+}
+
+#rbn-left {
+	position: absolute;
+	top: 15px;
+	left: -50px;
+	z-index: -1;
+	width: 40px;
+	border-top: 30px solid rgb(206,165,0);
+	border-left: 30px solid transparent;
+	border-bottom: 30px solid rgb(206,165,0);
+}
+
+#rbn-rfld {
+	position: absolute;
+	right: -15px;
+	bottom: -15px;
+	border-left: 20px solid rgb(176,150,0);
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+}
+
+#rbn-right {
+	position: absolute;
+	top: 15px;
+	right: -50px;
+	z-index: -1;
+	width: 40px;
+	border-top: 30px solid rgb(206,165,0);
+	border-right: 30px solid transparent;
+	border-bottom: 30px solid rgb(206,165,0);
+}
+
+header {
+	width: calc(100% - 80px);
+	height: 650px;
+	padding: 40px;
+	background: url('../img/aaa-bg.jpg');
+	background-size: cover;
+	background-position: 0 50%;
+}
+
+h1 {
+	position: relative;
+	top: 100px;
+	display: inline;
+	font: 900 96px/72px 'Roboto';
+	color: #F2F2F2;
+	text-shadow: 0 0 20px black;
+}
+
+#grid {
+	width: 1090px;
+	margin: 50px auto;
+}
+
+.content {
+	position: relative;
+	display: inline-block;
+	width: 320px;
+	height: 200px;
+	margin: 20px;
+	border-radius: 15px;
+	background: #f2f2f2;
+	cursor: pointer;
+}
+
+.thumbnail {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 320px;
+	height: 150px;
+	margin: auto;
+	background: green;
+}
